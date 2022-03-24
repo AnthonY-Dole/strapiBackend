@@ -44,6 +44,16 @@
       "relation": "manyToOne",
       "target": "api::favori.favori",
       "inversedBy": "commerce"
+    },
+    "ImageCommerce": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
