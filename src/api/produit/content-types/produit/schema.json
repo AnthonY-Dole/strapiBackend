@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produits",
+  "info": {
+    "singularName": "produit",
+    "pluralName": "produits",
+    "displayName": "Products",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "commerce": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::commerce.commerce",
+      "inversedBy": "products"
+    },
+    "diet": {
+      "type": "enumeration",
+      "enum": [
+        "VEGAN",
+        "VEGETARIAN"
+      ]
+    },
+    "categorie_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "product"
+    }
+  }
+}

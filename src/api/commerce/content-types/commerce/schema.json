@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "commerces",
+  "info": {
+    "singularName": "commerce",
+    "pluralName": "commerces",
+    "displayName": "Commerce",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categorie.categorie",
+      "inversedBy": "commerce"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::location.location",
+      "inversedBy": "commerce"
+    },
+    "adress": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit.produit",
+      "mappedBy": "commerce"
+    },
+    "favoris": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::favori.favori",
+      "inversedBy": "commerce"
+    }
+  }
+}

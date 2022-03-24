@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "informations_produits",
+  "info": {
+    "singularName": "informations-produit",
+    "pluralName": "informations-produits",
+    "displayName": "Informations Produits",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "allergen": {
+      "type": "enumeration",
+      "enum": [
+        "Gluten",
+        "Crustacés",
+        "œufs",
+        " Arachides",
+        " Poissons,",
+        " Soja",
+        " Lait",
+        "Fuits à coque (amandes, noisettes…),",
+        " Céleri",
+        " Moutarde,",
+        " Sésame",
+        " Sulfites",
+        " Lupin",
+        " Mollusques"
+      ]
+    }
+  }
+}

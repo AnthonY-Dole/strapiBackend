@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favoris",
+  "info": {
+    "singularName": "favori",
+    "pluralName": "favoris",
+    "displayName": "Favoris",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "favorises"
+    },
+    "commerce": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::commerce.commerce",
+      "mappedBy": "favoris"
+    }
+  }
+}
