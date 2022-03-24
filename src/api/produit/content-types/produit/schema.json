@@ -24,18 +24,16 @@
       "target": "api::commerce.commerce",
       "inversedBy": "products"
     },
-    "diet": {
-      "type": "enumeration",
-      "enum": [
-        "VEGAN",
-        "VEGETARIAN"
-      ]
-    },
     "categorie_product": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "products"
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "informations_ingredients": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::informations-produit.informations-produit",
+      "mappedBy": "product"
     }
   }
 }

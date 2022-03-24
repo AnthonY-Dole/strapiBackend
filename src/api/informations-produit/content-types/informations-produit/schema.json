@@ -4,7 +4,7 @@
   "info": {
     "singularName": "informations-produit",
     "pluralName": "informations-produits",
-    "displayName": "Informations Produits",
+    "displayName": "Informations Ingredient",
     "description": ""
   },
   "options": {
@@ -12,30 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "allergen": {
-      "type": "enumeration",
-      "enum": [
-        "Gluten",
-        "Crustacés",
-        "œufs",
-        " Arachides",
-        " Poissons,",
-        " Soja",
-        " Lait",
-        "Fuits à coque (amandes, noisettes…),",
-        " Céleri",
-        " Moutarde,",
-        " Sésame",
-        " Sulfites",
-        " Lupin",
-        " Mollusques"
-      ]
-    },
     "categorie_information": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::categore-information.categore-information",
       "mappedBy": "informations_produit"
+    },
+    "NomProduit": {
+      "type": "string"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::produit.produit",
+      "inversedBy": "informations_ingredients"
     }
   }
 }
