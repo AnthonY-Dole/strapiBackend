@@ -31,11 +31,11 @@
         "VEGETARIAN"
       ]
     },
-    "categorie_products": {
+    "categorie_product": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::product.product",
-      "mappedBy": "product"
+      "inversedBy": "products"
     }
   }
 }

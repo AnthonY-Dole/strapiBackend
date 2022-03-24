@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::produit.produit",
-      "inversedBy": "categorie_products"
-    },
-    "allergen": {
+    "CategorieProduit": {
       "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit.produit",
+      "mappedBy": "categorie_product"
     }
   }
 }

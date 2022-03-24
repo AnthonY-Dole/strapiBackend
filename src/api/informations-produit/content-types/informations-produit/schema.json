@@ -30,6 +30,12 @@
         " Lupin",
         " Mollusques"
       ]
+    },
+    "categorie_information": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::categore-information.categore-information",
+      "mappedBy": "informations_produit"
     }
   }
 }

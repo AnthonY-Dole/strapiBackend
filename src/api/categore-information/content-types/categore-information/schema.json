@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categore_informations",
+  "info": {
+    "singularName": "categore-information",
+    "pluralName": "categore-informations",
+    "displayName": "categorieInformation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CatInformation": {
+      "type": "string"
+    },
+    "informations_produit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::informations-produit.informations-produit",
+      "inversedBy": "categorie_information"
+    }
+  }
+}
