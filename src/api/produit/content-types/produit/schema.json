@@ -26,8 +26,9 @@
     },
     "categorie_product": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product.product"
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "products"
     },
     "informations_ingredients": {
       "type": "relation",
@@ -36,14 +37,15 @@
       "mappedBy": "product"
     },
     "PictureProduct": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

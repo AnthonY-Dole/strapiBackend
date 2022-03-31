@@ -12,8 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "CatProduit": {
+    "catProduit": {
       "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produit.produit",
+      "mappedBy": "categorie_product"
     }
   }
 }
